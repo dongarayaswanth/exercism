@@ -10,3 +10,4 @@
 7. Java has two types of numeric conversions:
  - Implicit conversions: no data will be lost and no additional syntax is required.
 - Explicit conversions: data could be lost and additional syntax in the form of a cast is required.
+8. Once a string has been constructed, its value can never change. Any methods that appear to modify a string will actually return a new string.
