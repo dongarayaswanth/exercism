@@ -161,3 +161,21 @@ boolean expr = 0 != 200;
 int value = expr ? 22 : 33;
 // => 22
 ```
+In Java, the null literal is used to denote the absence of a value.
+
+Primitive data types in Java all have a default value and therefore can never be null. By convention, they start with a lowercase letter e.g int.
+
+Reference types contain the memory address of an object and can have a value of null. They generally start with an uppercase letter, e.g. String.
+
+Attempting to assign a primitive variable a value of null will result in a compile time error 
+```
+//Throws compile time error stating the required type is int, but null was provided
+int number = null;
+```
+```
+//No error will occur as the String variable str is nullable
+String str = null;
+```
+Integer id = null;   // ✔️ Valid
+int id2 = null;      // ❌ Compilation error
+Because Integer is a reference type, it behaves just like any other object reference — meaning it can point to nothing (null).
