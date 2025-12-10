@@ -179,3 +179,13 @@ String str = null;
 Integer id = null;   // ✔️ Valid
 int id2 = null;      // ❌ Compilation error
 Because Integer is a reference type, it behaves just like any other object reference — meaning it can point to nothing (null).
+## class
+You can think of a class as a template for creating instances of that class. To create an instance of a class (also known as an object), the new keyword is used:
+```
+class Car {
+}
+
+// Create two car instances
+Car myCar = new Car();
+Car yourCar = new Car();
+```
