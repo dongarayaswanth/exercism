@@ -152,3 +152,12 @@ builder.append('b');
 builder.append('c');
 String builtString = builder.toString(); // builtString is "abc"
 ```
+Ternary Operators
+The ternary operator is a lightweight, compact alternative for simple if/else statements. Usually used in (but not restricted to) return statements, it needs just one single line to make the decision, returning the left value if the expression is true and the right value if false, as follows:
+```
+boolean expr = 0 != 200;
+
+// Ternary statement
+int value = expr ? 22 : 33;
+// => 22
+```
