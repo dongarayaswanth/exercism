@@ -189,3 +189,26 @@ class Car {
 Car myCar = new Car();
 Car yourCar = new Car();
 ```
+## Randomness
+An instance of the java.util.Random class can be used to generate random numbers in Java.
+```
+Random random = new Random();
+random.nextInt();
+// => -1169335537
+
+Random random = new Random();
+random.nextInt(10);
+// => 6
+
+//generate a random number from 10 through 19.
+Random random = new Random();
+10 + random.nextInt(10);
+// => 11
+```
+A random double can be generated using the nextDouble() method. This will generate a value in the range from 0.0 to 1.0.
+```
+Random random = new Random();
+
+random.nextDouble();
+// => 0.19250004204021398
+```
