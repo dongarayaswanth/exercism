@@ -219,4 +219,50 @@ fruits.add("Apple");
 fruits.remove("Apple");
 fruits.contains("Apple");
 fruits.size();
+```
+## Date-Time
+The java.time package introduced in Java 8 contains several classes to work with dates and time.
 
+LocalDate
+The java.time.LocalDate class represents a date without a time-zone in the ISO-8601 calendar system, such as 2007-12-03:
+```
+LocalDate date = LocalDate.of(2007, 12, 3);
+LocalDate date1 = LocalDate.of(2007, 12, 3);
+LocalDate date2 = LocalDate.of(2007, 12, 4);
+
+date1.isBefore(date2);
+// => true
+
+date1.isAfter(date2);
+// => false
+LocalDate date = LocalDate.of(2007, 12, 3);
+
+date.getDayOfMonth();
+// => 3
+LocalDate date = LocalDate.of(2007, 12, 3);
+
+date.plusDays(3);
+// => 2007-12-06
+```
+## LocalDateTime
+The java.time.LocalDateTime class represents a date-time without a time-zone in the ISO-8601 calendar system, such as 2007-12-03T10:15:30
+```
+LocalDateTime datetime = LocalDateTime.of(2007, 12, 3, 10, 15, 30);
+LocalDate date = LocalDate.of(2007, 12, 3);
+LocalDateTime datetime = date.atTime(10, 15, 30);
+datetime.toString();
+// => "2007-12-03T10:15:30"
+
+LocalDateTime datetime = LocalDateTime.of(2007, 12, 3, 10, 15, 30);
+LocalDateTime parsed = LocalDateTime.parse("2007-12-03T10:15:30");
+
+datetime.isEqual(parsed);
+// => true
+
+DateTimeFormatter parser = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+LocalDate date = LocalDate.parse("03/12/2007", parser);
+
+DateTimeFormatter printer = DateTimeFormatter.ofPattern("MMMM d, yyyy");
+printer.format(date);
+// => "December 3, 2007"
+```
